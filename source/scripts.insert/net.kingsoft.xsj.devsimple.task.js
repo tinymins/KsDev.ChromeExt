@@ -29,7 +29,7 @@
 	if(!Array.isArray(prefixes))
 		prefixes = ["svn://xsjreposvr1.rdev.kingsoft.net/sword3-products/trunk/client/ui/"];
 
-	var textarea = Ext.getDom("commiteorderForm_ctl05_ctl00_txtExpectResult");
+	var textarea = Ext.getDom("commiteorderForm_ctl05_ctl00_txtExpectResult") || Ext.getDom("commiteorderForm_ctl06_ContentPanel1_txtExpectResult");
 	var div = textarea.parentNode.previousElementSibling;
 
 	// 下拉框
