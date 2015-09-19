@@ -27,14 +27,15 @@
 		var text = textarea.value;
 		var pathlist = text.split("\n");
 		var prefix = window.prompt("请输入您要补全的SVN地址前缀","svn://xsjreposvr1.rdev.kingsoft.net/sword3-products/trunk/client/ui/");
-		if (prefix.substr(-1) != "/")
-			prefix = prefix + "/";
-		for (var i = pathlist.length - 1; i >= 0; i--) {
-			var line = pathlist[i];
-			if (line.length > 6 && line.substr(0,6) != "svn://") {
-				pathlist[i] = prefix + line;
+		if (prefix != null)
+			if (prefix.substr(-1) != "/")
+				prefix = prefix + "/";
+			for (var i = pathlist.length - 1; i >= 0; i--) {
+				var line = pathlist[i];
+				if (line.length > 6 && line.substr(0,6) != "svn://") {
+					pathlist[i] = prefix + line;
+				}
 			}
-		}
 		textarea.value = pathlist.join("\n");
 		e.preventDefault();
 		e.stopPropagation();
