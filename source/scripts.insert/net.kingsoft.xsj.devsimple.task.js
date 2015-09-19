@@ -70,7 +70,7 @@
 			var pathlist = text.split("\n");
 			for (var i = pathlist.length - 1; i >= 0; i--) {
 				var line = pathlist[i].trim();
-				if (line.substr(0,6) != "svn://") {
+				if (line != "" && line.substr(0,6) != "svn://") {
 					pathlist[i] = prefix + line;
 				}
 			}
