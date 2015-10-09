@@ -3,7 +3,7 @@
 
 	"name": "KsDev优化",
 	"description": "让KsDev网页更好用",
-	"version": "0.1.4",
+	"version": "0.1.5",
 
 	"content_scripts": [{
 		"all_frames": true,
