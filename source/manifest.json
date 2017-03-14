@@ -3,21 +3,21 @@
 
 	"name": "KsDev优化",
 	"description": "让KsDev网页更好用",
-	"version": "0.1.5",
+	"version": "0.1.6",
 
 	"content_scripts": [{
 		"all_frames": true,
 		"js": ["scripts/net.kingsoft.xsj.devsimple.task.document-end.js"],
 		"match_about_blank": true,
 		"matches": [
-			"http://xsj.kingsoft.net/DevSimple/Task/AddBranchCommitOrder.aspx*",
-			"http://xsj.kingsoft.net/DevSimple/Task/EditBranchCommitOrder.aspx*",
-			"http://xsj.kingsoft.net/DevSimple/Task/AddBranchCommitOrder_Temporary.aspx*",
-			"http://xsj.kingsoft.net/DevSimple/Task/EditBranchCommitOrder_Temporary.aspx*"
+			"*://*/DevSimple/Task/AddBranchCommitOrder.aspx*",
+			"*://*/DevSimple/Task/EditBranchCommitOrder.aspx*",
+			"*://*/DevSimple/Task/AddBranchCommitOrder_Temporary.aspx*",
+			"*://*/DevSimple/Task/EditBranchCommitOrder_Temporary.aspx*"
 		],
 		"run_at": "document_end"
 	}],
 	"web_accessible_resources": ["scripts.insert/*"],
 
-	"permissions": ["activeTab", "http://xsj.kingsoft.net/"]
+	"permissions": ["activeTab", "http://xsj.kingsoft.net/", "http://xsj.rdev.kingsoft.net/"]
 }
